@@ -1,0 +1,154 @@
+﻿using Entidades;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Presentacion
+{
+    public partial class frmManejoUsuarios : Form
+    {
+        public frmManejoUsuarios()
+        {
+            InitializeComponent();
+            CargarTabla();
+        }
+
+        public void CargarTabla() 
+        {
+            dgvListadoUsuarios.DataSource = GestorConexiones.GestorConexionServicios.ConsultarUsuarios();
+        }
+        private void Limpiar()
+        {
+            txtNombre.Text = string.Empty;
+            txtPass.Text = string.Empty;
+            txtIdUsuario.Text = string.Empty;
+            cmbEstado.SelectedIndex = -1;
+            txtEmail.Text = string.Empty;
+        }
+
+        #region Manejo de eventos
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Validaciones
+                if (txtNombre.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Nombre de usuario no ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txtPass.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Contraseña no ingresada", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txtEmail.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Email no ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (cmbEstado.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Estado no especificado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Usuarios u = new Usuarios();
+                u.IdUsuario = txtIdUsuario.Text;
+                u.Nombre = txtNombre.Text;
+                u.Contrasena = txtPass.Text;
+                u.Email = txtEmail.Text;
+                //If para asignar el valor bit Activo = true, Desactivado = false
+                if (cmbEstado.Text == "Activo") { u.Estado = true; } else { u.Estado = false; };
+                GestorConexiones.GestorConexionServicios.AgregarUsuario(u);
+                MessageBox.Show("Usuario agregado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarTabla();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+        private void btnModificarUsuario_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                //Validaciónes
+                if (txtNombre.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Nombre de usuario no ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txtPass.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Contraseña no ingresada", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txtEmail.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Email no ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (cmbEstado.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Estado no especificado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Usuarios u = new Usuarios();
+                u.Nombre = txtNombre.Text;
+                u.Contrasena = txtPass.Text;
+                u.IdUsuario = txtIdUsuario.Text;
+                u.Email = txtEmail.Text;
+                //If para asignar el valor bit Activo = true, Desactivado = false
+                if (cmbEstado.Text == "Activo") { u.Estado = true; } else { u.Estado = false; };
+
+                GestorConexiones.GestorConexionServicios.ModificarUsuario(u);
+                MessageBox.Show("Usuario modificado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarTabla();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnEliminarUsuario_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Usuarios u = new Usuarios();
+                u.IdUsuario = txtIdUsuario.Text;
+
+                if (txtIdUsuario.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Debe ingresar el numero identificador (id) para eliminar un usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                GestorConexiones.GestorConexionServicios.EliminarUsuario(u);
+                MessageBox.Show("Usuario Eliminado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarTabla();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+
+    }
+}

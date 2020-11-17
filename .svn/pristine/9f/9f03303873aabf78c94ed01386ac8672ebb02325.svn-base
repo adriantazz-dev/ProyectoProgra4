@@ -1,0 +1,322 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Entidades;
+
+namespace Presentacion.GestorConexiones
+{
+    static class GestorConexionServicios
+    {
+		public static int AgregarUsuario(Usuarios P_Usuario)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.AgregarUsuario(P_Usuario);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+                if (objservicio != null)
+                {
+					objservicio.Close();
+                }
+			}
+		}
+		public static int ModificarUsuario(Usuarios P_Usuario)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.ModificarUsuario(P_Usuario);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static int EliminarUsuario(Usuarios P_Usuario)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.EliminarUsuario(P_Usuario);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static int AgregarCliente(Clientes P_Cliente)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.AgregarCliente(P_Cliente);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static int ModificarCliente(Clientes P_Cliente)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.ModificarCliente(P_Cliente);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static int EliminarCliente(Clientes P_Cliente)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.EliminarCliente(P_Cliente);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static void AgregarPrestamo(Prestamos P_Prestamo)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				objservicio.AgregarPrestamo(P_Prestamo);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static List<Prestamos> ConsultarPrestamosPorCliente(Prestamos P_Prestamo)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.ConsultarPrestamosPorCliente(P_Prestamo);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static List<Prestamos> ConsultarPrestamosPorEstado(Prestamos P_Prestamo)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.ConsultarPrestamosPorEstado(P_Prestamo);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static List<Usuarios> ConsultarUsuarios()
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.ConsultarUsuarios();
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static List<Clientes> ConsultarClientes()
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.ConsultarClientes();
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static List<Usuarios> VerificarUsuario(Usuarios P_Usuario)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.VerificarUsuario(P_Usuario);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static List<Usuarios> VerificarEmailUsuario(Usuarios P_Usuario)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				return objservicio.VerificarEmailUsuario(P_Usuario);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+		public static void EnviarCorreoElectronico(Correo P_Correo)
+		{
+			WCFServicio.ServiciosClient objservicio = null;
+
+			try
+			{
+				objservicio = new WCFServicio.ServiciosClient();
+				objservicio.EnviarCorreoElectronico(P_Correo);
+			}
+			catch (Exception ex)
+			{
+
+				throw ex;
+			}
+			finally
+			{
+				if (objservicio != null)
+				{
+					objservicio.Close();
+				}
+			}
+		}
+
+	}
+}

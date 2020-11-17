@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\Proyecto2Progra3\Entidades\obj\Release\Entidades.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Proyecto2Progra3\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache

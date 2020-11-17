@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\Proyecto2Progra3\LogicaNegocio\obj\Release\LogicaNegocio.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Proyecto2Progra3\LogicaNegocio\obj\Release\LogicaNegocio.csproj.CoreCompileInputs.cache

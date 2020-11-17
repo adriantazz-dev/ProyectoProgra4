@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\Servicios.dll.config
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\Servicios.dll
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\Servicios.pdb
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\Entidades.dll
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\LogicaNegocio.dll
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\AccesoDatos.dll
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\Entidades.pdb
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\LogicaNegocio.pdb
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\AccesoDatos.pdb
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\bin\AccesoDatos.dll.config
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\obj\Debug\Servicios.dll
+C:\Users\Admin\source\repos\Proyecto2Progra3\Servicios\obj\Debug\Servicios.pdb

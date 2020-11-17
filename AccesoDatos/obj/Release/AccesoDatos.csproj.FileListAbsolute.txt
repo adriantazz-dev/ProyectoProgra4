@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\Proyecto2Progra3\AccesoDatos\obj\Release\AccesoDatos.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Proyecto2Progra3\AccesoDatos\obj\Release\AccesoDatos.csproj.CoreCompileInputs.cache

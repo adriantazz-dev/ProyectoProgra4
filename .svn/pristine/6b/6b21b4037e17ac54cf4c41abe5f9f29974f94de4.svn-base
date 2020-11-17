@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="AccesoDatos.Properties.Settings.Conexion" connectionString="Data Source=ADRIAN-PC;Initial Catalog=Proyecto2;User ID=usr_Acceso;Password=12345678"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+</configuration>

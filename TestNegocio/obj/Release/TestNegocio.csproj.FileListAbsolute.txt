@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\Proyecto2Progra3\TestNegocio\obj\Release\TestNegocio.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Proyecto2Progra3\TestNegocio\obj\Release\TestNegocio.csproj.CoreCompileInputs.cache
