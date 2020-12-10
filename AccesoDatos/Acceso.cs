@@ -411,9 +411,9 @@ namespace AccesoDatos
         /// </summary>
         /// <param name="P_Peticion">Entidad de tipo SQL Parametros</param>
         /// <returns>Lista de entidades de tipo clientes</returns>
-        public List<Clientes> ConsultarClientes(SQLParametros P_Peticion)
+        public List<Contactos> ConsultarContactos(SQLParametros P_Peticion)
         {
-            List<Clientes> lstClientes = new List<Clientes>();
+            List<Contactos> lstContactos = new List<Contactos>();
 
             try
             {
@@ -438,17 +438,20 @@ namespace AccesoDatos
                     //Es un ciclo que toma uno a uno los elementos de la coleccion que se este recorriendo
                     foreach (DataRow fila in dt.Rows)
                     {
-                        Clientes c = new Clientes();
+                        Contactos c = new Contactos();
 
                         //Aqui se obtiene los valores de celda o columna por fila leida
-                        c.Cedula = Convert.ToInt32(fila.ItemArray[0].ToString());
-                        c.Nombre = fila.ItemArray[1].ToString();
-                        c.Apellidos = fila.ItemArray[2].ToString();
-                        c.EstadoCivil = Convert.ToChar(fila.ItemArray[3].ToString());
-                        c.EstadoCliente = Convert.ToBoolean(fila.ItemArray[4].ToString());
-                        c.Telefono = Convert.ToInt32(fila.ItemArray[5].ToString());
+                        
+                        c.Nombre = fila.ItemArray[0].ToString();
+                        c.Telefono = Convert.ToInt32(fila.ItemArray[1].ToString());
+                        c.PalabraClave = fila.ItemArray[2].ToString();
+                        c.Correo = fila.ItemArray[3].ToString();
+                        c.TipoContacto = fila.ItemArray[4].ToString();
+                        c.Servicios = fila.ItemArray[5].ToString();
+                        c.EstadoCliente = Convert.ToBoolean(fila.ItemArray[3].ToString());
+                        
 
-                        lstClientes.Add(c);
+                        lstContactos.Add(c);
                     }
                 }
             }
@@ -461,7 +464,7 @@ namespace AccesoDatos
             {
                 this.CERRARCONEXION();
             }
-            return lstClientes;
+            return lstContactos;
         }
 
         /// <summary>
