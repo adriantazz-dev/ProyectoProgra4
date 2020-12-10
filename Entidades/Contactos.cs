@@ -9,7 +9,7 @@ namespace Entidades
     public class Contactos
     {
         public string Nombre { get; set; }
-        public int telefono { get; set; }
+        public int Telefono { get; set; }
         public string PalabraClave{ get; set; }
         public string Correo { get; set; }
         public string TipoContacto { get; set; }
