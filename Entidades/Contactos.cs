@@ -14,10 +14,8 @@ namespace Entidades
         public string Correo { get; set; }
         public string TipoContacto { get; set; }
         public string Servicios { get; set; }
-        public Boolean EstadoCliente { get; set; }
+        public Boolean EstadoContacto { get; set; }
         
-
-        public Prestamos Prestamos = new Prestamos();
 
         public Contactos()
         {
@@ -27,7 +25,7 @@ namespace Entidades
             Correo = string.Empty;
             TipoContacto = string.Empty;
             Servicios = string.Empty;
-            EstadoCliente = false;
+            EstadoContacto = false;
             
         }
     }

@@ -10,3 +10,15 @@ C:\Users\Admin\source\repos\Proyecto2Progra3\LogicaNegocio\obj\Debug\LogicaNegoc
 C:\Users\Admin\source\repos\Proyecto2Progra3\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete
 C:\Users\Admin\source\repos\Proyecto2Progra3\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 C:\Users\Admin\source\repos\Proyecto2Progra3\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\obj\Debug\LogicaNegocio.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\AccesoDatos.dll
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\Entidades.dll
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\AccesoDatos.dll.config
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\bin\Debug\Entidades.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete

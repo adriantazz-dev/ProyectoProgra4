@@ -41,9 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.cs" />
+    <Compile Include="Contactos.cs" />
     <Compile Include="Correo.cs" />
-    <Compile Include="Prestamos.cs" />
     <Compile Include="SQLParametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios.cs" />

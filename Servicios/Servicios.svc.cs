@@ -13,19 +13,10 @@ namespace Servicios
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Servicios.svc o Servicios.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Servicios : IServicios
     {
-        public void ActualizarPrestamo(Prestamos P_Prestamo)
-        {
-            Negocio.ActualizarPrestamo(P_Prestamo);
-        }
 
-        public int AgregarCliente(Clientes P_Cliente)
+        public int AgregarContacto(Contactos P_Contacto)
         {
-            return Negocio.AgregarCliente(P_Cliente);
-        }
-
-        public void AgregarPrestamo(Prestamos P_Prestamo)
-        {
-            Negocio.AgregarPrestamo(P_Prestamo);
+            return Negocio.AgregarContacto(P_Contacto);
         }
 
         public int AgregarUsuario(Usuarios P_Usuario)
@@ -33,19 +24,9 @@ namespace Servicios
             return Negocio.AgregarUsuario(P_Usuario);
         }
 
-        public List<Clientes> ConsultarClientes()
+        public List<Contactos> ConsultarContactos()
         {
-            return Negocio.ConsultarClientes();
-        }
-
-        public List<Prestamos> ConsultarPrestamosPorCliente(Prestamos P_Prestamo)
-        {
-            return Negocio.ConsultarPrestamosPorCliente(P_Prestamo);
-        }
-
-        public List<Prestamos> ConsultarPrestamosPorEstado(Prestamos P_Prestamo)
-        {
-            return Negocio.ConsultarPrestamosPorEstado(P_Prestamo);
+            return Negocio.ConsultarContactos();
         }
 
         public List<Usuarios> ConsultarUsuarios()
@@ -57,9 +38,9 @@ namespace Servicios
         {
         }
 
-        public int EliminarCliente(Clientes P_Cliente)
+        public int EliminarContacto(Contactos P_Contacto)
         {
-            return Negocio.EliminarCliente(P_Cliente);
+            return Negocio.EliminarContacto(P_Contacto);
         }
 
         public int EliminarUsuario(Usuarios P_Usuario)
@@ -72,9 +53,9 @@ namespace Servicios
             Negocio.EnviarCorreoElectronico(P_Correo);
         }
 
-        public int ModificarCliente(Clientes P_Cliente)
+        public int ModificarContacto(Contactos P_Contacto)
         {
-            return Negocio.ModificarCliente(P_Cliente);
+            return Negocio.ModificarContacto(P_Contacto);
         }
 
         public int ModificarUsuario(Usuarios P_Usuario)

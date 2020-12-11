@@ -18,3 +18,17 @@ C:\Users\Admin\source\repos\Proyecto2Progra3\Presentacion\obj\Debug\Presentacion
 C:\Users\Admin\source\repos\Proyecto2Progra3\Presentacion\obj\Debug\Presentacion.frmAgregarPrestamos.resources
 C:\Users\Admin\source\repos\Proyecto2Progra3\Presentacion\obj\Debug\Presentacion.frmManejoClientes.resources
 C:\Users\Admin\source\repos\Proyecto2Progra3\Presentacion\obj\Debug\Presentacion.frmActualizarPrestamo.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmActualizarPrestamo.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmAgregarPrestamos.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmLogin.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmManejoClientes.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmManejoUsuarios.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmMenuPrincipal.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmPrestamosPorCliente.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.frmPrestamosPorEstado.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Presentacion\obj\Debug\Presentacion.pdb

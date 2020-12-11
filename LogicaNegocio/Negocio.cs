@@ -168,9 +168,9 @@ namespace LogicaNegocio
         }
 
         /// <summary>
-        /// Método es para insertar un usuario con los valores recibidos desde presentación
+        /// Método es para insertar un Contacto con los valores recibidos desde presentación
         /// </summary>
-        /// <param name="P_Cliente">Entidad cliente</param>
+        /// <param name="P_Contacto">Entidad Contacto</param>
         /// <returns>1 = CORRECTO | 0 = ERROR</returns>
         public static int AgregarContacto(Contactos P_Contacto)
         {
@@ -179,49 +179,47 @@ namespace LogicaNegocio
                 SQLParametros objpeticion = new SQLParametros();
 
                 //Ajustar peticion para utilización con parametros
-                objpeticion.Peticion = @"EXEC PA_AgregarContacto @nombre, @telefono, @PalabraClave, @Correo, @TipoContacto, @Servicios, @estadocliente";
+                objpeticion.Peticion = @"EXEC PA_AgregarContacto @nombre, @telefono, @PalabraClave, @Correo, @TipoContacto, @Servicios, @estadocontacto";
 
-                //Crear los parametros
                 SqlParameter parametroNomUsuario = new SqlParameter();
                 parametroNomUsuario.ParameterName = "@nombre";
-                parametroNomUsuario.Size = 15;
+                parametroNomUsuario.Size = 50;
                 parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.Nombre;                
-                
+                parametroNomUsuario.Value = P_Contacto.Nombre;
+
                 SqlParameter parametroTelefono = new SqlParameter();
                 parametroTelefono.ParameterName = "@telefono";
                 parametroTelefono.SqlDbType = System.Data.SqlDbType.Int;
                 parametroTelefono.Value = P_Contacto.Telefono;
-                
+
                 SqlParameter parametroPalabraClave = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@PalabraClave";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.PalabraClave;
-                
+                parametroPalabraClave.ParameterName = "@PalabraClave";
+                parametroPalabraClave.Size = 50;
+                parametroPalabraClave.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroPalabraClave.Value = P_Contacto.PalabraClave;
+
                 SqlParameter parametroCorreo = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@Correo";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.Correo;  
-                
-                SqlParameter parametroTipo = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@TipoContacto";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.TipoContacto;
-                
-                SqlParameter parametroServicio = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@Servicios";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.Servicios;
-                
+                parametroCorreo.ParameterName = "@Correo";
+                parametroCorreo.Size = 80;
+                parametroCorreo.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroCorreo.Value = P_Contacto.Correo;
+
+                SqlParameter parametroTipoContacto = new SqlParameter();
+                parametroTipoContacto.ParameterName = "@TipoContacto";
+                parametroTipoContacto.Size = 50;
+                parametroTipoContacto.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroTipoContacto.Value = P_Contacto.TipoContacto;
+
+                SqlParameter parametroServicios = new SqlParameter();
+                parametroServicios.ParameterName = "@Servicios";
+                parametroServicios.Size = 50;
+                parametroServicios.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroServicios.Value = P_Contacto.Servicios;
 
                 SqlParameter parametroEstado = new SqlParameter();
                 parametroEstado.ParameterName = "@estadocliente";
                 parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
-                parametroEstado.Value = P_Cliente.EstadoCliente;
+                parametroEstado.Value = P_Contacto.EstadoContacto;
 
 
                 //Agrega a la lista de parametros los parametros creado
@@ -229,8 +227,8 @@ namespace LogicaNegocio
                 objpeticion.LstParametros.Add(parametroTelefono);
                 objpeticion.LstParametros.Add(parametroPalabraClave);
                 objpeticion.LstParametros.Add(parametroCorreo);
-                objpeticion.LstParametros.Add(parametroTipo);
-                objpeticion.LstParametros.Add(parametroServicio);
+                objpeticion.LstParametros.Add(parametroTipoContacto);
+                objpeticion.LstParametros.Add(parametroServicios);
                 objpeticion.LstParametros.Add(parametroEstado);
 
                 Acceso objacceso = new Acceso();
@@ -243,9 +241,9 @@ namespace LogicaNegocio
         }
 
         /// <summary>
-        /// Método es para modificar un cliente con los valores recibidos desde presentación
+        /// Método es para modificar un Contacto con los valores recibidos desde presentación
         /// </summary>
-        /// <param name="P_Cliente">Entidad cliente</param>
+        /// <param name="P_Contacto">Entidad Contacto</param>
         /// <returns>1 = CORRECTO | 0 = ERROR</returns>
         public static int ModificarContacto(Contactos P_Contacto)
         {
@@ -254,12 +252,12 @@ namespace LogicaNegocio
                 SQLParametros objpeticion = new SQLParametros();
 
                 //Ajustar peticion para utilización con parametros
-                 objpeticion.Peticion = @"EXEC PA_ModificarContacto @nombre, @telefono, @PalabraClave, @Correo, @TipoContacto, @Servicios, @estadocliente";
+                 objpeticion.Peticion = @"EXEC PA_ModificarContacto @nombre, @telefono, @PalabraClave, @Correo, @TipoContacto, @Servicios, @estadocontacto";
 
                 //Crear los parametros
                 SqlParameter parametroNomUsuario = new SqlParameter();
                 parametroNomUsuario.ParameterName = "@nombre";
-                parametroNomUsuario.Size = 15;
+                parametroNomUsuario.Size = 50;
                 parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
                 parametroNomUsuario.Value = P_Contacto.Nombre;                
                 
@@ -269,34 +267,33 @@ namespace LogicaNegocio
                 parametroTelefono.Value = P_Contacto.Telefono;
                 
                 SqlParameter parametroPalabraClave = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@PalabraClave";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.PalabraClave;
+                parametroPalabraClave.ParameterName = "@PalabraClave";
+                parametroPalabraClave.Size = 50;
+                parametroPalabraClave.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroPalabraClave.Value = P_Contacto.PalabraClave;
                 
                 SqlParameter parametroCorreo = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@Correo";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.Correo;  
+                parametroCorreo.ParameterName = "@Correo";
+                parametroCorreo.Size = 80;
+                parametroCorreo.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroCorreo.Value = P_Contacto.Correo;  
                 
-                SqlParameter parametroTipo = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@TipoContacto";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.TipoContacto;
+                SqlParameter parametroTipoContacto = new SqlParameter();
+                parametroTipoContacto.ParameterName = "@TipoContacto";
+                parametroTipoContacto.Size = 50;
+                parametroTipoContacto.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroTipoContacto.Value = P_Contacto.TipoContacto;
                 
-                SqlParameter parametroServicio = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@Servicios";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.Servicios;
+                SqlParameter parametroServicios = new SqlParameter();
+                parametroServicios.ParameterName = "@Servicios";
+                parametroServicios.Size = 50;
+                parametroServicios.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroServicios.Value = P_Contacto.Servicios;
                 
-
                 SqlParameter parametroEstado = new SqlParameter();
                 parametroEstado.ParameterName = "@estadocliente";
                 parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
-                parametroEstado.Value = P_Cliente.EstadoCliente;
+                parametroEstado.Value = P_Contacto.EstadoContacto;
 
 
                 //Agrega a la lista de parametros los parametros creado
@@ -304,8 +301,8 @@ namespace LogicaNegocio
                 objpeticion.LstParametros.Add(parametroTelefono);
                 objpeticion.LstParametros.Add(parametroPalabraClave);
                 objpeticion.LstParametros.Add(parametroCorreo);
-                objpeticion.LstParametros.Add(parametroTipo);
-                objpeticion.LstParametros.Add(parametroServicio);
+                objpeticion.LstParametros.Add(parametroTipoContacto);
+                objpeticion.LstParametros.Add(parametroServicios);
                 objpeticion.LstParametros.Add(parametroEstado);
 
 
@@ -319,9 +316,9 @@ namespace LogicaNegocio
         }
 
         /// <summary>
-        /// Método es para eliminar un cliente con los valores recibidos desde presentación
+        /// Método es para eliminar un Contacto con los valores recibidos desde presentación
         /// </summary>
-        /// <param name="P_Cliente">Entidad cliente</param>
+        /// <param name="P_Contacto">Entidad Contacto</param>
         /// <returns>1 = CORRECTO | 0 = ERROR</returns>
         public static int EliminarContacto(Contactos P_Contacto)
         {
@@ -330,17 +327,17 @@ namespace LogicaNegocio
                 SQLParametros objpeticion = new SQLParametros();
 
                 //Ajustar peticion para utilización con parametros
-                objpeticion.Peticion = @"EXEC PA_EliminarContacto @nombre";
+                objpeticion.Peticion = @"EXEC PA_EliminarContacto @PalabraClave";
 
                 //Crear los parametros
-                SqlParameter parametroNomUsuario = new SqlParameter();
-                parametroNomUsuario.ParameterName = "@nombre";
-                parametroNomUsuario.Size = 15;
-                parametroNomUsuario.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroNomUsuario.Value = P_Contacto.Nombre;   
+                SqlParameter parametroPalabraClave = new SqlParameter();
+                parametroPalabraClave.ParameterName = "@PalabraClave";
+                parametroPalabraClave.Size = 50;
+                parametroPalabraClave.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroPalabraClave.Value = P_Contacto.PalabraClave;
 
                 //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroNomUsuario);
+                objpeticion.LstParametros.Add(parametroPalabraClave);
 
 
                 Acceso objacceso = new Acceso();
@@ -352,240 +349,6 @@ namespace LogicaNegocio
             }
         }
 
-        /// <summary>
-        /// Método es para insertar un prestamo y vincularlo con un cliente con los valores recibidos desde presentación
-        /// </summary>
-        /// <param name="P_Prestamo">Entidad prestamo</param>
-        /// <returns>1 = CORRECTO | 0 = ERROR</returns>
-        public static void AgregarPrestamo(Prestamos P_Prestamo)
-        {
-            try
-            {
-                //Se crea una lista de comandos para guardar las peticiones 
-                List<SqlCommand> lstpeticiones = new List<SqlCommand>();
-
-                SQLParametros objpeticion = new SQLParametros();
-
-                //Ajustar peticion para utilización con parametros
-                objpeticion.Peticion = @"EXEC PA_AgregarPrestamo @monto, @tasainteres, @plazo, @frecuenciadepago, @fechapago";
-
-                //Crear los parametros
-                SqlParameter parametroMonto = new SqlParameter();
-                parametroMonto.ParameterName = "@monto";
-                parametroMonto.SqlDbType = System.Data.SqlDbType.Decimal;
-                parametroMonto.Value = P_Prestamo.Monto;
-
-                SqlParameter parametroTasa = new SqlParameter();
-                parametroTasa.ParameterName = "@tasainteres";
-                parametroTasa.SqlDbType = System.Data.SqlDbType.Decimal;
-                parametroTasa.Value = P_Prestamo.TasaInteres;
-
-                SqlParameter parametroPlazo = new SqlParameter();
-                parametroPlazo.ParameterName = "@plazo";
-                parametroPlazo.Size = 20;
-                parametroPlazo.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroPlazo.Value = P_Prestamo.Plazo;
-
-                SqlParameter parametroFrecuencia = new SqlParameter();
-                parametroFrecuencia.ParameterName = "@frecuenciadepago";
-                parametroFrecuencia.Size = 20;
-                parametroFrecuencia.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroFrecuencia.Value = P_Prestamo.FrecuenciaPago;
-
-                SqlParameter parametroFechaPago = new SqlParameter();
-                parametroFechaPago.ParameterName = "@fechapago";
-                parametroFechaPago.Size = 20;
-                parametroFechaPago.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroFechaPago.Value = P_Prestamo.FechaPago;
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroMonto);
-                objpeticion.LstParametros.Add(parametroTasa);
-                objpeticion.LstParametros.Add(parametroPlazo);
-                objpeticion.LstParametros.Add(parametroFrecuencia);
-                objpeticion.LstParametros.Add(parametroFechaPago);
-
-                Acceso objacceso = new Acceso();
-                //objacceso.AgregarPeticionEnListado(objpeticion, ref lstpeticiones);
-                objacceso.Ejecutar_Peticiones(objpeticion);
-
-                //Segunda petición 
-
-                //Int donde se guarda el id del ultimo prestamo agregado
-                int IdUltimoPrestamo = ConsultarUltimoPrestamo();
-
-                objpeticion = new SQLParametros();
-
-                //Ajustar peticion para utilización con parametros
-                objpeticion.Peticion = @"EXEC PA_VincularPrestamoConCliente @idprestamo, @cedula, @fecha";
-
-                //Crear los parametros
-                SqlParameter parametroIdPrestamo = new SqlParameter();
-                parametroIdPrestamo.ParameterName = "@idprestamo";
-                parametroIdPrestamo.SqlDbType = System.Data.SqlDbType.Int;
-                parametroIdPrestamo.Value = IdUltimoPrestamo;
-
-                SqlParameter parametroCedula = new SqlParameter();
-                parametroCedula.ParameterName = "@cedula";
-                parametroCedula.SqlDbType = System.Data.SqlDbType.Int;
-                parametroCedula.Value = P_Prestamo.Cedula;
-
-                SqlParameter parametroFecha = new SqlParameter();
-                parametroFecha.ParameterName = "@fecha";
-                parametroFecha.SqlDbType = System.Data.SqlDbType.DateTime;
-                parametroFecha.Value = P_Prestamo.FechaSolicitud;
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroIdPrestamo);
-                objpeticion.LstParametros.Add(parametroCedula);
-                objpeticion.LstParametros.Add(parametroFecha);
-
-                objacceso = new Acceso();
-                //objacceso.AgregarPeticionEnListado(objpeticion, ref lstpeticiones);
-                objacceso.Ejecutar_Peticiones(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Método es para actualizar estado de unm prestamo
-        /// </summary>
-        /// <param name="P_Prestamo">Entidad prestamo</param>
-        /// <returns>1 = CORRECTO | 0 = ERROR</returns>
-        public static void ActualizarPrestamo(Prestamos P_Prestamo)
-        {
-            try
-            {
-                //Se crea una lista de comandos para guardar las peticiones 
-                List<SqlCommand> lstpeticiones = new List<SqlCommand>();
-
-                SQLParametros objpeticion = new SQLParametros();
-
-                //Ajustar peticion para utilización con parametros
-                objpeticion.Peticion = @"EXEC PA_ActualizarPrestamo @idprestamo, @estado";
-
-                //Crear los parametros
-                SqlParameter parametroIdPrestamo = new SqlParameter();
-                parametroIdPrestamo.ParameterName = "@idprestamo";
-                parametroIdPrestamo.SqlDbType = System.Data.SqlDbType.Int;
-                parametroIdPrestamo.Value = P_Prestamo.IdPrestamo;
-
-                SqlParameter parametroEstado = new SqlParameter();
-                parametroEstado.ParameterName = "@estado";
-                parametroEstado.Size = 20;
-                parametroEstado.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroEstado.Value = P_Prestamo.Estado;
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroIdPrestamo);
-                objpeticion.LstParametros.Add(parametroEstado);
-
-                Acceso objacceso = new Acceso();
-                //objacceso.AgregarPeticionEnListado(objpeticion, ref lstpeticiones);
-                objacceso.Ejecutar_Peticiones(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Método para confirmar el id del ultimo paquete agregado
-        /// </summary>
-        /// <param name="P_Prestamo">Entidad prestamo</param>
-        /// <returns>1 = CORRECTO | 0 = ERROR</returns>
-        public static int ConsultarUltimoPrestamo()
-        {
-            try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-
-                //Peticion a ejecutar
-                objpeticion.Peticion = @"EXEC PA_ConsultarUltimoPrestamoAgregado";
-
-                Acceso objacceso = new Acceso();
-                List<Prestamos> prestamo = objacceso.ConsultarUltimoPrestamo(objpeticion);
-
-                Prestamos UltimoPrestamo = new Prestamos();
-                foreach (Prestamos p in prestamo)
-                {
-                    UltimoPrestamo.IdPrestamo = p.IdPrestamo;
-                }
-
-                return UltimoPrestamo.IdPrestamo;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Método es para Consultar los prestamos por cliente
-        /// </summary>
-        /// <param name="P_Prestamo">Entidad prestamo</param>
-        /// <returns>1 = CORRECTO | 0 = ERROR</returns>
-        public static List<Prestamos> ConsultarPrestamosPorCliente(Prestamos P_Prestamo)
-        {
-            try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"EXEC PA_ListarPrestamosxIdCLiente @cedula";
-
-                //Crear los parametros
-                SqlParameter parametroCedula = new SqlParameter();
-                parametroCedula.ParameterName = "@cedula";
-                parametroCedula.SqlDbType = System.Data.SqlDbType.Int;
-                parametroCedula.Value = P_Prestamo.Cedula;
-
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroCedula);
-
-                Acceso objacceso = new Acceso();
-                return objacceso.ConsultarPrestamosPorCliente(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Método es para Consultar los prestamos por estado
-        /// </summary>
-        /// <param name="P_Prestamo">Entidad prestamo</param>
-        /// <returns>1 = CORRECTO | 0 = ERROR</returns>
-        public static List<Prestamos> ConsultarPrestamosPorEstado(Prestamos P_Prestamo)
-        {
-            try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"EXEC PA_ListarPrestamosxEstado @estado";
-
-                //Crear los parametros
-                SqlParameter parametroEstado = new SqlParameter();
-                parametroEstado.ParameterName = "@estado";
-                parametroEstado.Size = 20;
-                parametroEstado.SqlDbType = System.Data.SqlDbType.VarChar;
-                parametroEstado.Value = P_Prestamo.Estado;
-
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroEstado);
-
-                Acceso objacceso = new Acceso();
-                return objacceso.ConsultarPrestamosPorEstado(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         /// <summary>
         /// Método es para Consultar los usuarios registrados
@@ -609,9 +372,9 @@ namespace LogicaNegocio
         }
 
         /// <summary>
-        /// Método es para Consultar los clientes registrados
+        /// Método es para Consultar los Contacto registrados
         /// </summary>
-        /// <param name="P_Cliente">Entidad cliente</param>
+        /// <param name="P_Contacto">Entidad Contacto</param>
         /// <returns>1 = CORRECTO | 0 = ERROR</returns>
         public static List<Contactos> ConsultarContactos()
         {

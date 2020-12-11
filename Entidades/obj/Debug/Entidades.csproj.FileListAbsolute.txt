@@ -4,3 +4,8 @@ C:\Users\Admin\source\repos\Proyecto2Progra3\Entidades\bin\Debug\Entidades.dll
 C:\Users\Admin\source\repos\Proyecto2Progra3\Entidades\bin\Debug\Entidades.pdb
 C:\Users\Admin\source\repos\Proyecto2Progra3\Entidades\obj\Debug\Entidades.dll
 C:\Users\Admin\source\repos\Proyecto2Progra3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Entidades\bin\Debug\Entidades.dll
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Entidades\obj\Debug\Entidades.dll
+C:\Users\Admin\Documents\GitHub\ProyectoProgra4\Entidades\obj\Debug\Entidades.pdb

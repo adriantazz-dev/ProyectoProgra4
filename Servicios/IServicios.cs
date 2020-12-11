@@ -22,31 +22,22 @@ namespace Servicios
         int EliminarUsuario(Usuarios P_Usuario);
 
         [OperationContract]
-        int AgregarCliente(Clientes P_Cliente);
+        int AgregarContacto(Contactos P_Contacto);
 
         [OperationContract]
-        int ModificarCliente(Clientes P_Cliente);
+        int ModificarContacto(Contactos P_Contacto);
 
         [OperationContract]
-        int EliminarCliente(Clientes P_Cliente);
-
-        [OperationContract]
-        void AgregarPrestamo(Prestamos P_Prestamo);
+        int EliminarContacto(Contactos P_Contacto);
 
         [OperationContract]
         List<Usuarios> VerificarUsuario(Usuarios P_Usuario);
 
         [OperationContract]
-        List<Prestamos> ConsultarPrestamosPorCliente(Prestamos P_Prestamo);
-
-        [OperationContract]
-        List<Prestamos> ConsultarPrestamosPorEstado(Prestamos P_Prestamo);
-
-        [OperationContract]
         List<Usuarios> ConsultarUsuarios();
 
         [OperationContract]
-        List<Clientes> ConsultarClientes();
+        List<Contactos> ConsultarContactos();
 
         [OperationContract]
         void EnviarCorreoElectronico(Correo P_Correo);
@@ -54,7 +45,5 @@ namespace Servicios
         [OperationContract]
         List<Usuarios> VerificarEmailUsuario(Usuarios P_Usuario);
 
-        [OperationContract]
-        void ActualizarPrestamo(Prestamos P_Prestamo);
     }
 }
